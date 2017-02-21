@@ -131,16 +131,24 @@ public class Snake {
 		int key=e.getKeyCode();
 		switch(key){
 		case KeyEvent.VK_LEFT:
-			head.dir=Dir.zuo;
+			if(head.dir!=Dir.you){
+				head.dir=Dir.zuo;
+			}
 			break;
 		case KeyEvent.VK_UP:
-			head.dir=Dir.shang;
+			if(head.dir!=Dir.xia){
+				head.dir=Dir.shang;
+			}
 			break;
 		case KeyEvent.VK_RIGHT:
-			head.dir=Dir.you;
+			if(head.dir!=Dir.zuo){
+				head.dir=Dir.you;
+			}
 			break;
 		case KeyEvent.VK_DOWN:	
-			head.dir=Dir.xia;
+			if(head.dir!=Dir.shang){
+				head.dir=Dir.xia;
+			}
 			break;
 		case KeyEvent.VK_ESCAPE:
 			System.exit(0);
